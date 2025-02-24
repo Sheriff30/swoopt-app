@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swoopt Starter Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-logo">
+        <img src="/assets/Logo.svg" alt="" />
+      </div>
+      <div id="step-0" class="step-container active">
+        <div class="welcome">VÄLKOMMEN!</div>
+        <div class="intro">
+          In the next 5 minutes, you will learn everything you need to become a
+          guru with Swoopt!
+        </div>
+        <button onclick="nextStep()">KÖR!</button>
+      </div>
+
+      <div id="step-1" class="step-container">
+        <div class="step-header">DOWNLOAD THE SWOOPT APP</div>
+        <div class="step-content">
+          <ol>
+            <li>
+              Open the App Store on your mobile phone
+              <div class="icon-group">
+                <div class="app-icon">
+                  <div class="download-icon">
+                    <img src="/assets/playstore.svg" alt="" />
+                  </div>
+                  <span>Android </span>
+                </div>
+                <div class="app-icon">
+                  <div class="download-icon">
+                    <img src="/assets/App store.png" alt="" />
+                  </div>
+                  <span>iPhone </span>
+                </div>
+              </div>
+            </li>
+            <li>Search for the "Swoopt" App</li>
+            <li>Download the Swoopt App to your mobile phone</li>
+          </ol>
+
+          <div class="nav-buttons">
+            <button onclick="prevStep()">< TILLBAKA</button>
+            <button onclick="nextStep()">NÄSTA ></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-2" class="step-container">
+        <div class="step-header">REGISTER IN THE SWOOPT APP</div>
+        <div class="step-content">
+          <ol>
+            <li>
+              <p>On your mobile phone, launch the Swoopt App</p>
+              <div class="app-icon">
+                <div class="logo-icon">
+                  <img src="/assets/logo-icon.svg" alt="" />
+                </div>
+                <span>Swoopt</span>
+              </div>
+            </li>
+            <li>Rego process to update here...</li>
+            <li>TBC...</li>
+          </ol>
+
+          <div class="nav-buttons">
+            <button onclick="prevStep()">< TILLBAKA</button>
+            <button onclick="nextStep()">NÄSTA ></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-3" class="step-container">
+        <div class="step-header">CHECK "MY BUSINESS PROFILE"</div>
+        <div class="step-content">
+          <ol>
+            <li>
+              In the top-right corner, tap on "Settings"
+              <div class="setting-icon">
+                <img src="/assets/settings.svg" alt="" />
+              </div>
+            </li>
+            <li>Confirm that all of your businesses are displaying</li>
+            <li>
+              If one or more of your businesses is not displaying, email us at
+              info@swoopt.app
+            </li>
+          </ol>
+
+          <div class="nav-buttons">
+            <button onclick="prevStep()">< TILLBAKA</button>
+            <button onclick="nextStep()">NÄSTA ></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-4" class="step-container">
+        <div class="step-header">CREATE YOUR FIRST OFFER(S)</div>
+        <div class="step-content">
+          <div class="step-group">
+            <ol>
+              <li>In Settings, tap on "MY MARKETING"</li>
+              <li>Tap on "+ Create New"</li>
+              <li>
+                Fill in the required fields (see tips below):
+                <ul>
+                  <li>Heading:</li>
+                  <li>Sub-heading:</li>
+                  <li>Villkor:</li>
+                  <li>Inlösningar:</li>
+                  <li>Est. Savings:</li>
+                  <li>Startdatum:</li>
+                  <li>Utgångsdatum:</li>
+                  <li>Streckkod:</li>
+                </ul>
+              </li>
+              <li>
+                If you have more than one launch offer, follow the steps above
+                for each offer
+              </li>
+            </ol>
+            <div class="step-screen">
+              <img src="/assets/swoopt-screen-step4.jpg" alt="" />
+            </div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevStep()">< TILLBAKA</button>
+            <button onclick="nextStep()">NÄSTA ></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-5" class="step-container">
+        <div class="step-header">MY STATISTICS (EXPLAINED)</div>
+        <div class="step-content">
+          <div class="step-group">
+            <ol>
+              <li>In Settings, tap on "MY STATISTICS"</li>
+              <li>Fill in the required fields (see tips below):</li>
+              <li>
+                If you have more than one launch offer, follow the steps above
+                for each offer
+              </li>
+            </ol>
+            <div class="step-screen screen-step5">
+              <img src="/assets/swoopt-screen-step5.jpg" alt="" />
+            </div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevStep()">< TILLBAKA</button>
+            <button onclick="nextStep()">NÄSTA ></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-6" class="step-container">
+        <div class="congrats">GRATTIS!</div>
+        <div class="final-message">
+          Now you are ready to grow your business with Swoopt!
+        </div>
+        <button onclick="restartGuide()">OK</button>
+      </div>
+    </div>
+
+    <script>
+      let currentStep = 0;
+      const totalSteps = 6;
+
+      function updateSteps() {
+        // Hide all steps
+        for (let i = 0; i <= totalSteps; i++) {
+          document.getElementById(`step-${i}`).classList.remove("active");
+        }
+
+        // Show current step
+        document.getElementById(`step-${currentStep}`).classList.add("active");
+      }
+
+      function nextStep() {
+        if (currentStep < totalSteps) {
+          currentStep++;
+          updateSteps();
+          window.scrollTo(0, 0);
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 0) {
+          currentStep--;
+          updateSteps();
+          window.scrollTo(0, 0);
+        }
+      }
+
+      function restartGuide() {
+        currentStep = 0;
+        updateSteps();
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </body>
+</html>
