@@ -13,8 +13,9 @@
 @font-face {
   font-family: "Nexa";
   src:
-    url("assets/font/NexaRustHandmade-Trial-Condensed.ttf") format("ttf"),
-    url("assets/font/NexaRustHandmade-Trial-Extended.ttf") format("ttf");
+    url("assets/font/WEB/NexaRustHandmade-Trial-Condensed.woff") format("woff"),
+    url("assets/font/WEB/NexaRustHandmade-Trial-Condensed.woff2")
+      format("woff2");
   font-weight: normal;
   font-style: normal;
 }
