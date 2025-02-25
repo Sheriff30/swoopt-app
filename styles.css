@@ -175,6 +175,10 @@ li {
   margin-left: 25px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .table {
   padding: 15px;
   border: 1px solid #fff;
