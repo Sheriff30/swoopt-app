@@ -192,6 +192,7 @@ button:disabled {
   font-size: 60px;
   font-weight: bold;
   margin: 40px 0 20px;
+  font-family: "Nexa", sans-serif;
 }
 
 .final-message {
